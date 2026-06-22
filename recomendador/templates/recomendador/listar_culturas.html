@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroSeed - Culturas</title>
+</head>
+<body>
+    <h1>🌱 Culturas cadastradas no AgroSeed</h1>
+
+    {% for cultura in culturas %}
+        <div>
+            <h2>{{ cultura.nome }}</h2>
+            <p>{{ cultura.descricao }}</p>
+            <p><strong>Temperatura ideal:</strong> {{ cultura.temperatura_minima }}°C a {{ cultura.temperatura_maxima }}°C</p>
+            <p><strong>Solo ideal:</strong> {{ cultura.solo_ideal }}</p>
+            <p><strong>Umidade ideal:</strong> {{ cultura.umidade_ideal }}</p>
+            <p><strong>Época de plantio:</strong> {{ cultura.epoca_plantio }}</p>
+            <p><strong>Tempo de colheita:</strong> {{ cultura.tempo_colheita_dias }} dias</p>
+            <p><strong>Dificuldade:</strong> {{ cultura.dificuldade }}</p>
+        </div>
+
+        <hr>
+    {% empty %}
+        <p>Nenhuma cultura cadastrada ainda.</p>
+    {% endfor %}
+</body>
+</html>
