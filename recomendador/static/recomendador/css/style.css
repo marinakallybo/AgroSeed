@@ -1,51 +1,99 @@
+/* 
+    RESET GLOBAL
+    Remove margens/paddings padrões do navegador
+    e facilita o controle do tamanho dos elementos.
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
+    ESTILO GERAL DO SITE
+    Define fonte, cor de fundo e cor principal dos textos.
+*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     background: #f4f7f2;
     color: #1f2a1f;
 }
 
+/* 
+    NAVBAR
+    Barra superior do site.
+    Usa flexbox para deixar o logo de um lado e os links do outro.
+*/
 .navbar {
     background: #123d2a;
     color: #ffffff;
-    padding: 18px 8%;
+    padding: 16px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* 
+    MARCA/LOGO DA NAVBAR
+    Agrupa o ícone e o nome do projeto.
+*/
 .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: "Boogaloo", Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
+
+/* 
+    ÍCONE DA LOGO
+    Controla o tamanho do emoji/ícone.
+*/
 .logo {
-    font-size: 28px;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
 }
 
+/* 
+    LINKS DA NAVBAR
+    Deixa os links lado a lado com espaçamento.
+*/
 .navbar-links {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 18px;
 }
 
+/* 
+    ESTILO DOS LINKS DA NAVBAR
+    Remove sublinhado e deixa o texto branco.
+*/
 .navbar-links a {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
+/* 
+    EFEITO AO PASSAR O MOUSE NOS LINKS
+*/
 .navbar-links a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
 }
 
+/* 
+    CONTAINER PRINCIPAL
+    Centraliza o conteúdo e limita a largura máxima da página.
+*/
 .container {
     width: 84%;
     max-width: 1180px;
@@ -53,6 +101,10 @@ body {
     padding: 40px 0;
 }
 
+/* 
+    HERO / BANNER PRINCIPAL
+    Área de destaque das páginas.
+*/
 .hero {
     background: linear-gradient(135deg, #dcefd5, #f7fbf4);
     border-radius: 24px;
@@ -61,6 +113,10 @@ body {
     border: 1px solid #d0e4c8;
 }
 
+/* 
+    TAG PEQUENA ACIMA DOS TÍTULOS
+    Exemplo: "Banco de culturas", "Recomendador agrícola".
+*/
 .tag {
     color: #2f7d4f;
     font-weight: bold;
@@ -70,12 +126,19 @@ body {
     margin-bottom: 10px;
 }
 
+/* 
+    TÍTULO PRINCIPAL DO HERO
+*/
 .hero h1 {
     font-size: 42px;
     max-width: 760px;
     margin-bottom: 16px;
+    font-weight: 800;
 }
 
+/* 
+    PARÁGRAFO DO HERO
+*/
 .hero p {
     font-size: 18px;
     max-width: 720px;
@@ -83,6 +146,10 @@ body {
     color: #405040;
 }
 
+/* 
+    SEÇÃO DO FORMULÁRIO
+    Caixa branca onde fica o formulário de recomendação.
+*/
 .form-section {
     background: #ffffff;
     padding: 28px;
@@ -91,6 +158,10 @@ body {
     margin-bottom: 36px;
 }
 
+/* 
+    FORMULÁRIO DE RECOMENDAÇÃO
+    Usa grid com 3 colunas para organizar os campos.
+*/
 .recommendation-form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -98,17 +169,27 @@ body {
     align-items: end;
 }
 
+/* 
+    GRUPO DE CAMPO DO FORMULÁRIO
+    Cada label + input/select fica em coluna.
+*/
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+/* 
+    LABEL DOS CAMPOS
+*/
 .form-group label {
     font-weight: bold;
     color: #243524;
 }
 
+/* 
+    INPUTS E SELECTS DO FORMULÁRIO
+*/
 .form-group input,
 .form-group select {
     padding: 12px 14px;
@@ -118,6 +199,10 @@ body {
     background: #fbfdf9;
 }
 
+/* 
+    BOTÃO PRINCIPAL
+    Usado para ações principais, como gerar recomendações.
+*/
 .btn-primary {
     padding: 13px 18px;
     border: none;
@@ -127,26 +212,43 @@ body {
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
+/* 
+    EFEITO HOVER DO BOTÃO PRINCIPAL
+*/
 .btn-primary:hover {
     background: #256640;
 }
 
+/* 
+    CABEÇALHO DE SEÇÕES
+    Usado antes de listas/cards.
+*/
 .section-header {
     margin-bottom: 20px;
 }
 
 .section-header h2 {
     font-size: 30px;
+    font-weight: 800;
 }
 
+/* 
+    GRID DOS CARDS
+    Organiza os cards em duas colunas.
+*/
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
+/* 
+    CARD DE CULTURA
+    Usado tanto na listagem quanto nos resultados da recomendação.
+*/
 .crop-card {
     background: #ffffff;
     padding: 24px;
@@ -155,6 +257,10 @@ body {
     box-shadow: 0 8px 20px rgba(31, 42, 31, 0.06);
 }
 
+/* 
+    TOPO DO CARD
+    Deixa nome da cultura de um lado e pontuação/dificuldade do outro.
+*/
 .card-top {
     display: flex;
     align-items: center;
@@ -166,6 +272,10 @@ body {
     font-size: 24px;
 }
 
+/* 
+    PONTUAÇÃO DE COMPATIBILIDADE
+    Aparece na página de recomendação.
+*/
 .score {
     background: #e4f5dc;
     color: #256640;
@@ -174,12 +284,19 @@ body {
     font-weight: bold;
 }
 
+/* 
+    DESCRIÇÃO DA CULTURA
+*/
 .description {
     color: #4b5c4b;
     line-height: 1.5;
     margin-bottom: 18px;
 }
 
+/* 
+    GRID DE INFORMAÇÕES DO CARD
+    Exibe temperatura, solo, umidade, plantio, colheita etc.
+*/
 .info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -188,6 +305,9 @@ body {
     font-size: 14px;
 }
 
+/* 
+    CAIXA DOS MOTIVOS DA RECOMENDAÇÃO
+*/
 .motives {
     background: #f6faf3;
     padding: 14px;
@@ -203,12 +323,19 @@ body {
     margin-bottom: 6px;
 }
 
+/* 
+    RODAPÉ DO SITE
+*/
 .footer {
     text-align: center;
     padding: 24px;
     color: #5c6b5c;
 }
 
+/* 
+    RESPONSIVIDADE
+    Quando a tela tiver até 800px, o layout se adapta para celular/tablet.
+*/
 @media (max-width: 800px) {
     .navbar {
         flex-direction: column;
@@ -232,9 +359,10 @@ body {
     }
 }
 
-
-#homepage
-
+/* 
+    HOMEPAGE
+    Botões da página inicial.
+*/
 .hero-actions {
     display: flex;
     gap: 14px;
@@ -242,11 +370,18 @@ body {
     flex-wrap: wrap;
 }
 
+/* 
+    Transforma link em botão sem sublinhado.
+*/
 .link-button {
     text-decoration: none;
     display: inline-block;
 }
 
+/* 
+    BOTÃO SECUNDÁRIO
+    Usado para ações alternativas, como "Ver culturas".
+*/
 .btn-secondary {
     padding: 13px 18px;
     border-radius: 12px;
@@ -255,15 +390,17 @@ body {
     background: #ffffff;
     font-weight: bold;
     text-decoration: none;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
 .btn-secondary:hover {
     background: #eef8ea;
 }
 
-
-#listasementes
-
+/* 
+    LISTA DE SEMENTES/CULTURAS
+    Estilo da etiqueta de dificuldade.
+*/
 .difficulty {
     background: #f1ead7;
     color: #7a5a18;
@@ -274,6 +411,10 @@ body {
     text-transform: capitalize;
 }
 
+/* 
+    ESTADO VAZIO
+    Aparece quando não existe nenhuma cultura cadastrada.
+*/
 .empty-state {
     background: #ffffff;
     border: 1px solid #dde8d8;
