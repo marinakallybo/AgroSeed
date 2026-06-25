@@ -256,25 +256,7 @@ http://127.0.0.1:8000/
 
 ## 🖼️ Interface
 
-> Adicione aqui prints da aplicação quando quiser documentar visualmente o projeto.
-
-Sugestão de organização:
-
-```text
-docs/
-└── screenshots/
-    ├── home.png
-    ├── culturas.png
-    └── recomendacao.png
-```
-
-Exemplo no README:
-
-```md
-![Página inicial](docs/screenshots/home.png)
-![Página de culturas](docs/screenshots/culturas.png)
-![Página de recomendação](docs/screenshots/recomendacao.png)
-```
+<img width="1872" height="931" alt="image" src="https://github.com/user-attachments/assets/0e74a363-a331-43cb-ab65-749ffaa46ee6" />
 
 ---
 
